@@ -2,28 +2,63 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>OCR Simples</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <title>OCR Online</title>
+
+    <link rel="stylesheet"
+    href="/static/style.css">
 </head>
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <h1>OCR Simples</h1>
+    <h1>OCR Online</h1>
 
-        <form method="POST" enctype="multipart/form-data">
+    <form method="POST"
+    enctype="multipart/form-data">
 
-            <input type="file" name="imagem" required>
+        <input
+        type="file"
+        name="imagem"
+        required>
 
-            <button type="submit">
-                Ler Texto
-            </button>
+        <button type="submit">
+            Ler Texto
+        </button>
 
-        </form>
+    </form>
 
-        <textarea readonly>{{ texto }}</textarea>
+    <button
+    onclick="limparTexto()"
+    class="limpar">
 
-    </div>
+        Limpar Texto
+    </button>
+
+    {% if mensagem %}
+        <p class="erro">
+            {{ mensagem }}
+        </p>
+    {% endif %}
+
+    <textarea
+    id="resultado"
+    readonly>
+
+{{ texto }}
+
+</textarea>
+
+</div>
+
+<script>
+function limparTexto(){
+
+    document
+    .getElementById(
+        "resultado"
+    ).value = "";
+}
+</script>
 
 </body>
 </html>
