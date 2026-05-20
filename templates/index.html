@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>OCR Simples</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>OCR Simples</h1>
+
+        <form method="POST" enctype="multipart/form-data">
+
+            <input type="file" name="imagem" required>
+
+            <button type="submit">
+                Ler Texto
+            </button>
+
+        </form>
+
+        <textarea readonly>{{ texto }}</textarea>
+
+    </div>
+
+</body>
+</html>
