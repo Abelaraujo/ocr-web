@@ -27,3 +27,18 @@ textarea{
     height: 300px;
     margin-top: 20px;
 }
+
+.limpar{
+    background: #ff4444;
+    margin-top: 10px;
+}
+
+.limpar:hover{
+    background: #cc0000;
+}
+
+.erro{
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
